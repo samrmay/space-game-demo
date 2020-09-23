@@ -1,0 +1,8 @@
+.gameArea {
+  background-color: black;
+  color: white;
+  height: 600px;
+  width: 80%;
+  justify-self: center;
+  align-self: center;
+}

@@ -1,0 +1,4 @@
+.appRoot {
+  display: flex;
+  flex-direction: column;
+}
