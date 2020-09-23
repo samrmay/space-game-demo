@@ -38,14 +38,16 @@ class GameAreaContainer extends React.Component {
   }
 
   handleKeyPress(event) {
+    const rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
+    console.log(rect);
     const { key } = event;
-    if (key == "a") {
+    if (key == "a" && this.state.playerXPos > rect.left) {
       this.setState((prevState) => {
         return { playerXPos: prevState.playerXPos - 8 };
       });
     }
 
-    if (key == "d") {
+    if (key == "d" && this.state.playerXPos < rect.right) {
       this.setState((prevState) => {
         return { playerXPos: prevState.playerXPos + 8 };
       });
